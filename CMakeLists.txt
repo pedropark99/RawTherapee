@@ -876,9 +876,6 @@ else()
         CACHE INTERNAL "" FORCE)
 endif()
 
-add_subdirectory(rtengine)
-add_subdirectory(rtgui)
-add_subdirectory(rtdata)
 
 
 
@@ -893,6 +890,16 @@ target_include_directories(rtgui_mark2 PRIVATE ${GTKMM_INCLUDE_DIRS})
 target_link_directories(rtgui_mark2 PRIVATE ${GTKMM_LIBRARY_DIRS})
 
 target_link_libraries(rtgui_mark2 PRIVATE rtengine)
+
+
+
+
+
+add_subdirectory(rtengine)
+add_subdirectory(rtgui)
+add_subdirectory(rtdata)
+
+
 
 
 
