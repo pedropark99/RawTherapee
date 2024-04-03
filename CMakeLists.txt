@@ -879,3 +879,20 @@ endif()
 add_subdirectory(rtengine)
 add_subdirectory(rtgui)
 add_subdirectory(rtdata)
+
+
+
+set(RTGUI_MARK2_SOURCE_FILES
+    rtgui-mark2/main.cc
+)
+add_executable(rtgui_mark2 ${RTGUI_MARK2_SOURCE_FILES})
+target_link_libraries(rtgui_mark2  PRIVATE ${GTKMM_LIBRARIES})
+
+# Add other flags to the compiler
+target_include_directories(rtgui_mark2 PRIVATE ${GTKMM_INCLUDE_DIRS})
+target_link_directories(rtgui_mark2 PRIVATE ${GTKMM_LIBRARY_DIRS})
+
+target_link_libraries(rtgui_mark2 PRIVATE rtengine)
+
+
+
